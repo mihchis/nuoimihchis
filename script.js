@@ -91,7 +91,7 @@ function initChart() {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'bottom',
+                    position: 'right',
                     labels: {
                         color: document.body.classList.contains('dark-mode') ? '#ecf0f1' : '#2c3e50',
                         font: {
