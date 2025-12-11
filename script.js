@@ -58,6 +58,8 @@ function initDarkMode() {
 }
 
 // 3. Chart.js (Budget)
+let budgetChart; // Store instance
+
 function initChart() {
     const ctx = document.getElementById('budgetChart');
     if (!ctx) return;
@@ -66,7 +68,7 @@ function initChart() {
     const budgetList = document.querySelector('.budget-list-container');
     if (budgetList) budgetList.style.display = 'none';
 
-    new Chart(ctx, {
+    budgetChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: ['Ăn uống (40%)', 'Điện nước (20%)', 'Thuê nhà (15%)', 'Y tế (10%)', 'Học tập (10%)', 'Giải trí (5%)'],
@@ -81,7 +83,8 @@ function initChart() {
                     '#9b59b6', // Purple
                     '#95a5a6'  // Grey
                 ],
-                borderWidth: 1
+                borderWidth: 1,
+                borderColor: document.body.classList.contains('dark-mode') ? '#2c3e50' : '#fff'
             }]
         },
         options: {
@@ -90,7 +93,10 @@ function initChart() {
                 legend: {
                     position: 'bottom',
                     labels: {
-                        color: document.body.classList.contains('dark-mode') ? '#fff' : '#333'
+                        color: document.body.classList.contains('dark-mode') ? '#ecf0f1' : '#2c3e50',
+                        font: {
+                            size: 14
+                        }
                     }
                 }
             }
@@ -99,8 +105,15 @@ function initChart() {
 
     // Update chart text color on theme toggle
     document.getElementById('darkModeToggle').addEventListener('click', () => {
-        // Simple reload or re-render could act here, but exact live update requires chart instance access.
-        // For simplicity, we assume user accepts chart legend color might need refresh or handles it naturally.
+        const isDark = document.body.classList.contains('dark-mode');
+        const textColor = isDark ? '#ecf0f1' : '#2c3e50';
+        const borderColor = isDark ? '#2c3e50' : '#fff';
+
+        if (budgetChart) {
+            budgetChart.options.plugins.legend.labels.color = textColor;
+            budgetChart.data.datasets[0].borderColor = borderColor;
+            budgetChart.update();
+        }
     });
 }
 
