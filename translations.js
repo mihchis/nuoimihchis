@@ -2,6 +2,8 @@
 const translations = {
     vi: {
         whyFeedMe: "🎯 Tại Sao Nên Nuôi Mihchis?",
+        leaderboardTitle: "🏆 Top Donate Tháng Này",
+        leaderboardDesc: "Vinh danh các \"Shark\" đã nuôi Mihchis!",
         featureRealtime: "Sao Kê Realtime",
         featureRealtimeDesc: "Cập nhật từng giây! Còn nhanh hơn cả tốc độ bạn chuyển tiền!",
         featureTransparent: "Minh Bạch 300%",
@@ -48,6 +50,8 @@ const translations = {
     },
     en: {
         whyFeedMe: "🎯 Why Feed Me?",
+        leaderboardTitle: "🏆 Top Donators of the Month",
+        leaderboardDesc: "Honoring the \"Sharks\" who fed Mihchis!",
         featureRealtime: "Realtime Statements",
         featureRealtimeDesc: "Updated every second! Faster than your bank transfer!",
         featureTransparent: "300% Transparent",

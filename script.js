@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initConfetti();
     initNotifications();
     initMusic();
+    initLeaderboard();
 });
 
 // 2. Dark Mode

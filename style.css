@@ -160,6 +160,87 @@ body.dark-mode .slogan {
     margin: 0 auto;
 }
 
+/* Leaderboard */
+.leaderboard-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.leaderboard-container {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+body.dark-mode .leaderboard-item {
+    border-bottom-color: #444;
+}
+
+.leaderboard-item:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+body.dark-mode .leaderboard-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.rank {
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 30px;
+}
+
+.rank-1 {
+    color: #f1c40f;
+    font-size: 1.5em;
+}
+
+/* Gold */
+.rank-2 {
+    color: #bdc3c7;
+    font-size: 1.4em;
+}
+
+/* Silver */
+.rank-3 {
+    color: #e67e22;
+    font-size: 1.3em;
+}
+
+/* Bronze */
+
+.donor-info {
+    text-align: left;
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.donor-name {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.donor-amount {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
