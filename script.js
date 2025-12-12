@@ -195,3 +195,35 @@ function initMusic() {
     // Optional: Lower volume
     bgMusic.volume = 0.3;
 }
+
+// 7. Fake Leaderboard
+function initLeaderboard() {
+    const container = document.querySelector('.leaderboard-container');
+    if (!container) return;
+
+    const topDonors = [
+        { name: "Shark Hưng", amount: "5.000.000.000đ", icon: "🦈" },
+        { name: "Một người giấu tên", amount: "1 Iphone 15 Pro Max", icon: "📱" },
+        { name: "Bà Hàng Xóm", amount: "3 bát phở bò", icon: "🍜" },
+        { name: "Người Yêu Cũ", amount: "1.000đ (kèm lời xin lỗi)", icon: "💔" },
+        { name: "Fan Cứng 20 năm", amount: "100.000đ", icon: "⭐" }
+    ];
+
+    container.innerHTML = topDonors.map((donor, index) => {
+        let rankIcon = index + 1;
+        let rankClass = `rank-${index + 1}`;
+        if (index === 0) rankIcon = "🥇";
+        if (index === 1) rankIcon = "🥈";
+        if (index === 2) rankIcon = "🥉";
+
+        return `
+            <div class="leaderboard-item ${rankClass}">
+                <div class="leaderboard-rank">${rankIcon}</div>
+                <div class="leaderboard-info">
+                    <div class="name">${donor.name} ${donor.icon}</div>
+                </div>
+                <div class="amount">${donor.amount}</div>
+            </div>
+        `;
+    }).join('');
+}

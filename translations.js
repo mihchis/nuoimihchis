@@ -2,8 +2,6 @@
 const translations = {
     vi: {
         whyFeedMe: "🎯 Tại Sao Nên Nuôi Mihchis?",
-        leaderboardTitle: "🏆 Top Donate Tháng Này",
-        leaderboardDesc: "Vinh danh các \"Shark\" đã nuôi Mihchis!",
         featureRealtime: "Sao Kê Realtime",
         featureRealtimeDesc: "Cập nhật từng giây! Còn nhanh hơn cả tốc độ bạn chuyển tiền!",
         featureTransparent: "Minh Bạch 300%",
@@ -46,12 +44,14 @@ const translations = {
         videoDesc: "Đây chính là nguồn cảm hứng cho website này! 😂",
         messageTitle: "🎤 Lời Nhắn Từ Trái Tim",
         message: "Trong thời đại mà <strong>\"từ thiện\"</strong> đã trở thành từ nhạy cảm, Mihchis xin khẳng định: <strong style=\"color: #e74c3c;\">HÃY NUÔI MIHCHIS!</strong><br><br>Mihchis nghèo, Mihchis cần tiền, nhưng Mihchis KHÔNG MẤT LƯƠNG TÂM! Mỗi đồng tiền các bạn gửi, Mihchis sẽ chi tiêu rõ ràng, minh bạch như bụng đói của Mihchis vậy! 😭<br><br><em>P/S: Mihchis hứa sẽ không mua xe hơi bằng tiền donate. Vì... Mihchis chưa có bằng lái! 🚗❌</em>",
+        leaderboardTitle: "🏆 Bảng Phong Thần (Top Donate)",
+        leaderboardDesc: "Vinh danh các đại gia đã nuôi Mihchis (Số liệu... tin hay không tùy bạn!)",
         disclaimer: "<strong>⚠️ DISCLAIMER:</strong> Đây là trang web mang tính chất <strong>HÀI HƯỚC</strong>. Mọi nội dung đều mang tính giải trí, không nhằm mục đích xúc phạm hay chỉ trích bất kỳ cá nhân/tổ chức nào."
     },
     en: {
+        leaderboardTitle: "🏆 Hall of Fame (Top Donors)",
+        leaderboardDesc: "Honoring the tycoons feeding Mihchis (Data... believe it or not!)",
         whyFeedMe: "🎯 Why Feed Me?",
-        leaderboardTitle: "🏆 Top Donators of the Month",
-        leaderboardDesc: "Honoring the \"Sharks\" who fed Mihchis!",
         featureRealtime: "Realtime Statements",
         featureRealtimeDesc: "Updated every second! Faster than your bank transfer!",
         featureTransparent: "300% Transparent",
