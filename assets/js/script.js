@@ -69,12 +69,25 @@ function initChart() {
     const budgetList = document.querySelector('.budget-list-container');
     if (budgetList) budgetList.style.display = 'none';
 
+    // Get current language or default to 'vi'
+    const lang = localStorage.getItem('preferredLang') || 'vi';
+    // Access global translations object if available, otherwise fallback
+    const t = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang] : {
+        budgetLabel1: 'Ăn uống (40%)',
+        budgetLabel2: 'Điện nước (20%)',
+        budgetLabel3: 'Thuê nhà (15%)',
+        budgetLabel4: 'Y tế (10%)',
+        budgetLabel5: 'Học tập (10%)',
+        budgetLabel6: 'Giải trí (5%)',
+        budgetDatasetLabel: 'Chi tiêu'
+    };
+
     budgetChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Ăn uống (40%)', 'Điện nước (20%)', 'Thuê nhà (15%)', 'Y tế (10%)', 'Học tập (10%)', 'Giải trí (5%)'],
+            labels: [t.budgetLabel1, t.budgetLabel2, t.budgetLabel3, t.budgetLabel4, t.budgetLabel5, t.budgetLabel6],
             datasets: [{
-                label: 'Chi tiêu',
+                label: t.budgetDatasetLabel,
                 data: [40, 20, 15, 10, 10, 5],
                 backgroundColor: [
                     '#e74c3c', // Red
